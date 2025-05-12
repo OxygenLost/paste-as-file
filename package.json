@@ -1,0 +1,41 @@
+{
+    "name": "paste-as-file",
+    "displayName": "Paste As File",
+    "description": "Right-click to paste clipboard content into a new file named by the first line (e.g., hello.py).",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.60.0"
+    },
+    "activationEvents": [
+        "onCommand:extension.pasteAsFile"
+    ],
+    "main": "extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.pasteAsFile",
+                "title": "Paste as File"
+            }
+        ],
+        "menus": {
+            "explorer/context": [
+                {
+                    "command": "extension.pasteAsFile",
+                    "when": "explorerResourceIsFolder || !resource",
+                    "group": "navigation"
+                }
+            ]
+        }
+    },
+    "categories": [
+        "Other"
+    ],
+    "publisher": "oxygenlost",
+    "scripts": {},
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/vscode": "^1.60.0"
+    }
+}
