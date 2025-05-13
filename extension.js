@@ -14,10 +14,10 @@ async function activate(context) {
             const lines = clipboard.split(/\r?\n/);
             const firstLine = lines[0].trim();
 
-            // 提取形如 "# main.py" 的文件名
-            const match = firstLine.match(/^#\s*([\w\-]+\.(\w+))/);
+            // 提取形如 "# filename.ext" 的文件名，支持更多扩展名
+            const match = firstLine.match(/^#\s*([\w\-]+\.([\w]+))/);
             if (!match) {
-                vscode.window.showErrorMessage('第一行格式应为 "# filename.py"');
+                vscode.window.showErrorMessage('第一行格式应为 "# filename.扩展名"，例如：# main.cpp, # data.txt');
                 return;
             }
 

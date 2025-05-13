@@ -2,7 +2,7 @@
     "name": "paste-as-file",
     "displayName": "Paste As File",
     "description": "Right-click to paste clipboard content into a new file named by the first line (e.g., hello.py).",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "engines": {
         "vscode": "^1.60.0"
     },
@@ -34,8 +34,9 @@
     "scripts": {},
     "keywords": [],
     "author": "",
-    "license": "ISC",
+    "license": "Apache-2.0",
     "devDependencies": {
         "@types/vscode": "^1.60.0"
-    }
+    },
+    "icon": "icon.png"
 }
